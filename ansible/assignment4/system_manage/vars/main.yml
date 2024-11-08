@@ -1,0 +1,24 @@
+---
+# vars file for test
+soft_list: 
+      - nginx
+      - tomcat9
+
+user_list:
+      - name: akash
+
+      - name: ninja
+        groups: ubuntu
+        shell: /bin/bash
+        state: absent
+
+git_repos:
+      - repo_url: https://github.com/opstree/spring3hibernate
+        dest: /home/ubuntu/spring3hibernate
+
+dir_list:
+      - path: /home/ubuntu/testies
+      - path: /home/ubuntu/ninja
+        state: directory
+        owner: root
+        group: root
